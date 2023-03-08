@@ -1,5 +1,6 @@
 <?php
-
+    session_start();
+    require_once "functions/sessions.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -21,6 +22,10 @@
                 </div>
 
                 <form action="handlers/handle_register.php" method="POST" >
+                    <?php foreach(getSessionKey("errors") as $error): ?>
+                        <div class="alert alert-danger p-1"><?php echo $error; ?></div>
+                    <?php endforeach; ?>
+                    <?php removeSession('errors'); ?>
                     <div class="mb-3">
                         <label for="name">Name</label>
                         <input type="text" name="name" id="name" class="form-control">

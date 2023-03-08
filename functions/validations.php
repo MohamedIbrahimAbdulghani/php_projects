@@ -1,7 +1,7 @@
 <?php
 
 // this function to check a name is required or not
-function requiredInput($value) {
+function requiredInput($input) {
     if(empty($input)):
         return true;
     else:
@@ -30,6 +30,15 @@ function maxInput($value, $max) {
 // validate email
 function validEmail($email) {
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)):
+        return true;
+    else:
+        return false;
+    endif;
+}
+
+// this function to check the confirm password is equal or not
+function sameInput($value1, $value2) {
+    if($value1 != $value2):
         return true;
     else:
         return false;
