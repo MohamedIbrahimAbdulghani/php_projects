@@ -52,7 +52,7 @@ if(postMethod()):
             "email" => $email
         ];
         sessionStore("user", $user);
-        header("refresh:1;url=../profile.php");
+        header("Location: ../profile.php");
     else:
         sessionStore("errors", $errors);
         header("Location: ../register.php");

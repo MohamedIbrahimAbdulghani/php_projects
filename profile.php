@@ -3,7 +3,7 @@
     require_once "functions/sessions.php";
 
     if(!isset($_SESSION["user"])):
-        header("Location: register.php");die;
+        header("Location: register.php");
     endif;
 ?>
 <!doctype html>
@@ -19,14 +19,14 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-8 mx-auto bg-light my-5 border border-dark border-3">
+            <div class="col-8 mx-auto bg-light my-5 border border-dark border-3 form-control">
                 <h1 class=" p-2 mt-3"> Profile </h1>
                 <div class="mb-5">
                     <h2>Name : <?php echo getSessionKey("user")["name"] ?? "" ?></h2>
                     <h2>Email : <?php echo getSessionKey("user")["email"] ?? "" ?> </h2>
                 </div>
 
-                
+                <a href="logout.php"class="btn btn-danger " style="margin-bottom: 10px;">Logout</a>
             </div>
         </div>
     </div>

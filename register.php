@@ -15,7 +15,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-8 mx-auto bg-light my-5 border border-dark border-3">
+            <div class="col-8 mx-auto bg-light my-3 border border-dark border-3 ">
                 <h1 class=" p-2 mt-3"> Sign Up </h1>
                 <div class="mb-5">
                     <span>It's quick and easy.</span>
